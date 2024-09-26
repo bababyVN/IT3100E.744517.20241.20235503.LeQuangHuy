@@ -77,7 +77,7 @@ public class SolveEquation {
                 break;
             
             default:
-                result += " Please check the equation type again! ";
+                result += " Please check the problem type again! ";
                 break;
         }
         JOptionPane.showMessageDialog(null,result,"Thanks for using!", JOptionPane.INFORMATION_MESSAGE);
