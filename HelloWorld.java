@@ -3,6 +3,5 @@ public class HelloWorld {
         System.out.println("Xin chao \n cac ban!");
         System.out.println("Hello \t world!");
         System.exit(0);
-        System.exit(0);
     }    
 }
