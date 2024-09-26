@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 public class CalculateTwoNumbers {
     public static void main(String[] args){
         String strNum1, strNum2;
-        String strNotification = "You've just asked: ";
+        String strNotification = "You've just asked for";
         double result = 0;
 
         strNum1 = JOptionPane.showInputDialog(null,
@@ -39,9 +39,9 @@ public class CalculateTwoNumbers {
                 System.exit(0);
                 break;
         }
-        strNotification += strNum1 + " " + operator + " " + strNum2 + " !";
+        strNotification += " the " + operator + " of " + strNum1 + " and " + strNum2;
         JOptionPane.showMessageDialog(null, strNotification, "Thanks for entered your question! ", JOptionPane.INFORMATION_MESSAGE);
-        JOptionPane.showMessageDialog(null, "The result of the calculation is "+ result + " ! ", "Result", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "The result is "+ result + " ! ", "Result", JOptionPane.INFORMATION_MESSAGE);
         System.exit(0);
     }
 
