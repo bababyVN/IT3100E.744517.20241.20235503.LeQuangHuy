@@ -11,8 +11,8 @@ public class CalculateTwoNumbers {
         strNum2 = JOptionPane.showInputDialog(null,
         "Please input the second number: ","Input the second number",JOptionPane.INFORMATION_MESSAGE);
         
-        String operator = JOptionPane.showInputDialog(null, "Please input the operator: "
-        ,"sum, difference, product or quotient. ",JOptionPane.INFORMATION_MESSAGE);
+        String operator = JOptionPane.showInputDialog(null, "sum, difference, product or quotient. "
+        ,"Please input the operator: ",JOptionPane.INFORMATION_MESSAGE);
 
         double num1 = Double.parseDouble(strNum1);
         double num2 = Double.parseDouble(strNum2);
