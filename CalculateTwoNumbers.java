@@ -43,6 +43,7 @@ public class CalculateTwoNumbers {
         JOptionPane.showMessageDialog(null, strNotification, "Thanks for entered your question! ", JOptionPane.INFORMATION_MESSAGE);
         JOptionPane.showMessageDialog(null, "The result is "+ result + " ! ", "Result", JOptionPane.INFORMATION_MESSAGE);
         System.exit(0);
+        System.exit(0);
     }
 
 }

@@ -82,5 +82,6 @@ public class SolveEquation {
         }
         JOptionPane.showMessageDialog(null,result,"Thanks for using!", JOptionPane.INFORMATION_MESSAGE);
         System.exit(0);
+        System.exit(0);
     }
 }
