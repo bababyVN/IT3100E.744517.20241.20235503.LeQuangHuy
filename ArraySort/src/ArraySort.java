@@ -25,9 +25,9 @@ public class ArraySort {
             sortedarray += num + " ";
         }
         System.out.println("Here's the result:");
-        System.out.println("  Sorted Array: " + sortedarray);
-        System.out.println("  Sum: " + sum);
-        System.out.println("  Average: " + average);
+        System.out.println(" Sorted Array: " + sortedarray);
+        System.out.println(" Sum: " + sum);
+        System.out.println(" Average: " + average);
     }
     
     private static void Sort(int[] array, int n) {
