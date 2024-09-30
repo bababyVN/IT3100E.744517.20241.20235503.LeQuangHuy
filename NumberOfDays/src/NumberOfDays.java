@@ -35,6 +35,9 @@ public class NumberOfDays {
         case 11:
         	result = 30;
         	break;
+        case 2:
+        	result = 28;
+        	break;
         }
         if (isLeapYear(year)) {
         	if(Month == 2) {
