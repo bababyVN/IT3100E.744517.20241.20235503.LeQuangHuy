@@ -18,6 +18,7 @@ public class NumberOfDays {
             System.out.println("It seem like you have made a typo. Please try again!");
             year = keyboard.nextInt();
         }
+        
         int result = 0;
         switch(Month) {
         case 1:
@@ -37,13 +38,12 @@ public class NumberOfDays {
         	break;
         case 2:
         	result = 28;
-        	break;
+            if (isLeapYear(year)) {
+            	result = 29;
+            }
+            break;
         }
-        if (isLeapYear(year)) {
-        	if(Month == 2) {
-        		result = 29;
-        	}
-        }
+
         System.out.println("There are " + result + " days in " + StrMonth + ", " + year);
         
     }
