@@ -12,17 +12,24 @@ public class Aims {
 		//anOrder.addDigitalVideoDisc(dvd2);
 		
 		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
+		DigitalVideoDisc dvd4 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
 		anOrder.addDigitalVideoDisc(dvd3);
 		
-		DigitalVideoDisc[] dvd_list = {dvd2,dvd2,dvd2,dvd2,dvd2};
+		//DigitalVideoDisc[] dvd_list = {dvd2,dvd2,dvd2,dvd2,dvd2};
 		anOrder.addDigitalVideoDisc(dvd1,dvd1,dvd1);
 		//anOrder.removeDigitalVideoDisc(dvd2);
-		anOrder.addDigitalVideoDisc(dvd3,dvd3);
-		anOrder.addDigitalVideoDisc(dvd_list);
+		anOrder.addDigitalVideoDisc(dvd3,dvd4);
+		//anOrder.addDigitalVideoDisc(dvd_list);
 		
-		System.out.println(dvd3.getId());
+		System.out.println(dvd1.getId());
 		System.out.println("Total cost is: " + anOrder.totalCost());
+		anOrder.print();
 		
-	}
+        anOrder.searchById(3);	
+
+        // Search by title
+        anOrder.searchByTitle("Aladin");
+    }
+
 
 }
