@@ -1,7 +1,7 @@
 
 public class DigitalVideoDisc {
 	
-	private static int nbDigitalVideoDiscs = 0;
+	
 	
 	private String title;
 	private String category;
@@ -9,6 +9,7 @@ public class DigitalVideoDisc {
 	private int length;
 	private float cost;
 	
+	private static int nbDigitalVideoDiscs = 0;
 	private int id;
 	
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
