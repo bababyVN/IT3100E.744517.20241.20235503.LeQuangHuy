@@ -15,23 +15,10 @@ public class TestPassingParameter {
     }
 
     public static void swap(DigitalVideoDisc o1, DigitalVideoDisc o2) {
-    	String title = o1.getTitle();
-		String category = o1.getCategory();
-		String director = o1.getDirector();
-		int length = o1.getLength();
-		float cost = o1.getCost();
-
-		o1.setTitle(o2.getTitle());
-		o1.setCategory(o2.getCategory());
-		o1.setDirector(o2.getDirector());
-		o1.setLength(o2.getLength());
-		o1.setCost(o2.getCost());
-
-		o2.setTitle(title);
-		o2.setCategory(category);
-		o2.setDirector(director);
-		o2.setLength(length);
-		o2.setCost(cost);
+    	DigitalVideoDisc tmp = new DigitalVideoDisc("tmp");
+    	tmp.setTitle(o1.getTitle());
+        o1.setTitle(o2.getTitle());
+        o2.setTitle(tmp.getTitle());
     }
 
     public static void changeTitle(DigitalVideoDisc dvd, String title) {
