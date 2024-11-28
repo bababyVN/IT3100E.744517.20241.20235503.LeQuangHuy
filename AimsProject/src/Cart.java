@@ -99,7 +99,6 @@ public class Cart {
 	        System.out.println("Total cost: " + totalCost + " $");
 	        System.out.println("***************************************************");
 	    }	
-
 	 public void searchById(int id) {
 	        boolean found = false;
 	        for (DigitalVideoDisc dvd : itemsOrdered) {
@@ -137,7 +136,6 @@ public class Cart {
 	            System.out.println("No DVD found with title containing: " + title);
 	        }
 	    }
-	 
 
 	 
 		
