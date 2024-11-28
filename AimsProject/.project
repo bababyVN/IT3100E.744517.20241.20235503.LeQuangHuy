@@ -14,4 +14,26 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Design/Class Diagram0.asta</name>
+			<type>1</type>
+			<location>D:/Workspace/AimsProject/Design/Class Diagram0.asta</location>
+		</link>
+		<link>
+			<name>Design/Class Diagram0.png</name>
+			<type>1</type>
+			<location>D:/Workspace/AimsProject/Design/Class Diagram0.png</location>
+		</link>
+		<link>
+			<name>Requirement/UseCase Diagram1.asta</name>
+			<type>1</type>
+			<location>D:/Workspace/AimsProject/Requirement/UseCase Diagram1.asta</location>
+		</link>
+		<link>
+			<name>Requirement/UseCase Diagram1.png</name>
+			<type>1</type>
+			<location>D:/Workspace/AimsProject/Requirement/UseCase Diagram1.png</location>
+		</link>
+	</linkedResources>
 </projectDescription>
