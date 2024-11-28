@@ -20,6 +20,7 @@ public class Aims {
 		anOrder.addDigitalVideoDisc(dvd3,dvd3);
 		anOrder.addDigitalVideoDisc(dvd_list);
 		
+		System.out.println(dvd3.getId());
 		System.out.println("Total cost is: " + anOrder.totalCost());
 		
 	}
