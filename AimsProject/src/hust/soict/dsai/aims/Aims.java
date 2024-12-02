@@ -19,7 +19,7 @@ public class Aims {
 		anOrder.addDigitalVideoDisc(dvd3);
 		
 		DigitalVideoDisc[] dvd_list = {dvd2,dvd2,dvd2,dvd2,dvd2};
-		anOrder.addDigitalVideoDisc(dvd4,dvd1,dvd1);
+		anOrder.addDigitalVideoDisc(dvd1,dvd1,dvd1);
 		//anOrder.removeDigitalVideoDisc(dvd2);
 		anOrder.addDigitalVideoDisc(dvd3,dvd4);
 		anOrder.addDigitalVideoDisc(dvd_list);
