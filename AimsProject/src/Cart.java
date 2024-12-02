@@ -1,5 +1,7 @@
+
 package hust.soict.dsai.aims.cart;
 import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 
 public class Cart {
 
@@ -138,8 +140,5 @@ public class Cart {
 	        if (!found) {
 	            System.out.println("No DVD found with title containing: " + title);
 	        }
-	    }
-	 
-	 
-		
+	    }	
 }

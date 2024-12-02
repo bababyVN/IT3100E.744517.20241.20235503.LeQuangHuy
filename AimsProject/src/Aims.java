@@ -19,17 +19,29 @@ public class Aims {
 		DigitalVideoDisc dvd4 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
 		anOrder.addDigitalVideoDisc(dvd3);
 
+
 		DigitalVideoDisc[] dvd_list = { dvd2, dvd2, dvd2, dvd2, dvd2 };
 		anOrder.addDigitalVideoDisc(dvd1, dvd1, dvd4);
 		// anOrder.removeDigitalVideoDisc(dvd2);
 		anOrder.addDigitalVideoDisc(dvd3, dvd1);
 		anOrder.addDigitalVideoDisc(dvd_list);
 
+		// DigitalVideoDisc[] dvd_list = {dvd2,dvd2,dvd2,dvd2,dvd2};
+		anOrder.addDigitalVideoDisc(dvd1, dvd1, dvd2);
+		// anOrder.removeDigitalVideoDisc(dvd2);
+		anOrder.addDigitalVideoDisc(dvd3, dvd4);
+		// anOrder.addDigitalVideoDisc(dvd_list);
+
+
 		System.out.println(dvd1.getId());
 		System.out.println("Total cost is: " + anOrder.totalCost());
 		anOrder.print();
 
+
 		anOrder.searchById(2);
+
+		anOrder.searchById(3);
+
 
 		// Search by title
 		anOrder.searchByTitle("Aladin");
