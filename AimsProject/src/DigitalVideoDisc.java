@@ -1,3 +1,4 @@
+package hust.soict.dsai.aims.disc;
 
 public class DigitalVideoDisc {
 	private String title;
@@ -6,6 +7,9 @@ public class DigitalVideoDisc {
 	private int length;
 	private float cost;
 
+	
+	private static int nbDigitalVideoDiscs = 0;
+	private int id;
 	
 	private static int nbDigitalVideoDiscs = 0;
 	private int id;
@@ -28,14 +32,9 @@ public class DigitalVideoDisc {
 		this.director = director;
 		this.category = category;
 		this.title = title;
-
-		
-
-
 		this.cost = cost;
 		nbDigitalVideoDiscs++;
-        this.id = nbDigitalVideoDiscs;
-
+    this.id = nbDigitalVideoDiscs;
 	}
 	public DigitalVideoDisc(String title, String catagory, float cost) {
 		super();

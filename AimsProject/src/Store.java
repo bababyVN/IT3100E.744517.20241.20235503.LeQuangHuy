@@ -1,3 +1,6 @@
+package hust.soict.dsai.aims.store;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class Store {
     // Attribute: an array to store DVDs
     private DigitalVideoDisc[] itemsInStore;
