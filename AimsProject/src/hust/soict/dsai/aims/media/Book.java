@@ -30,7 +30,7 @@ public class Book extends Media {
     	}
     }
     public void removeAuthor(String authorName) {
-    	if (authors.contains(authorName)) { // Check if the author is present in the list
+    	if (authors.contains(authorName)) {
             authors.remove(authorName);
             System.out.println("Author removed: " + authorName);
         } else {

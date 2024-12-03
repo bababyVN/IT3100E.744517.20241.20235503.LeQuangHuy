@@ -57,6 +57,13 @@ public class CompactDisc extends Media {
             System.out.println("Track not found: " + track);
         }
     }
+    public int getLength() {
+    	int leghth = 0;
+    	for (Track track : tracks) {
+    		leghth += track.getLength();
+    	}
+    	return leghth;
+    }
     
     public String getArtist() {
         return artist;

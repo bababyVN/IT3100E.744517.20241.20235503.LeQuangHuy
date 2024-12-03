@@ -17,6 +17,15 @@ public class Disc extends Media {
         super(title, category);
         this.director = director;
     }
+	public Disc(String director, String category, String title, float cost) {
+		super(title, category, cost);
+		this.director = director;
+	}
+	public Disc(String title, String category, String director, int length, float cost) {
+		super(title, category, cost);
+		this.director = director;
+		this.length = length;
+	}
     public Disc(String title, String category, float cost, int length) {
         super(title, category, cost);
         this.length = length;
@@ -27,12 +36,6 @@ public class Disc extends Media {
     }
     public void setLength(int length) {
         this.length = length;
-    }
-    public String getDirector() {
-        return director;
-    }
-    public void setDirector(String director) {
-        this.director = director;
     }
 
 }
