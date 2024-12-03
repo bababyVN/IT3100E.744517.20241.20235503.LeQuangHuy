@@ -50,7 +50,7 @@ public class CompactDisc extends Media {
     	}
     }
     public void removeTrack(Track track) {
-    	if (tracks.contains(track)) { // Check if the author is present in the list
+    	if (tracks.contains(track)) {
     		tracks.remove(track);
             System.out.println("Track removed: " + track);
         } else {
@@ -68,4 +68,12 @@ public class CompactDisc extends Media {
     public String getArtist() {
         return artist;
     }
+    
+    public void play() {
+        System.out.println("Playing CD: " + this.getTitle());
+        for(Track track : tracks) {
+            track.play();
+        }
+    }
+        
 }

@@ -37,4 +37,7 @@ public class Book extends Media {
             System.out.println("Author not found: " + authorName);
         }
     }
+    public String toString() {
+        return "Book - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + authors + ": " + this.getCost() + " $";
+    }
 }

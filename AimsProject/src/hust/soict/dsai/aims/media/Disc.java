@@ -1,6 +1,6 @@
 package hust.soict.dsai.aims.media;
 
-public class Disc extends Media {
+public class Disc extends Media implements Playable {
     private int length;
     private String director;
     
@@ -37,5 +37,6 @@ public class Disc extends Media {
     public void setLength(int length) {
         this.length = length;
     }
-
+    public void play() {
+	}
 }
