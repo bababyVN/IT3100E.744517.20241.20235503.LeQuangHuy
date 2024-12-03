@@ -14,4 +14,16 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/Hust/soict/dsai/lab02/ReadingAssignment.png</name>
+			<type>1</type>
+			<location>C:/Users/lequa/Downloads/IT3100E.744517.20241.20235503.LeQuangHuy-main/OtherProjects/src/Hust/soict/dsai/lab02/ReadingAssignment/ReadingAssignment.png</location>
+		</link>
+		<link>
+			<name>src/Hust/soict/dsai/lab02/answers.txt</name>
+			<type>1</type>
+			<location>C:/Users/lequa/Downloads/IT3100E.744517.20241.20235503.LeQuangHuy-main/answers.txt</location>
+		</link>
+	</linkedResources>
 </projectDescription>
