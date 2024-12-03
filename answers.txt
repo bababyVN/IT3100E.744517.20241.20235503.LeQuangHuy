@@ -1,4 +1,4 @@
-Lab02: No. If we create 2 Constructor: + DigitalVideoDisc(title : String) and + DigitalVideoDisc( category : String), then Java can not distinguish between the twos since both has the same number of parameters and type.
+Lab 02: No. If we create 2 Constructor: + DigitalVideoDisc(title : String) and + DigitalVideoDisc( category : String), then Java can not distinguish between the twos since both has the same number of parameters and type.
 But we can work around this by using for example: + DigitalVideoDisc(title : String) and + DigitalVideoDisc( category : String, isCategory : boolean).
 
-Lab03: Java is strictly pass-by-value programming language.
+Lab 03: Java is strictly pass-by-value programming language.
