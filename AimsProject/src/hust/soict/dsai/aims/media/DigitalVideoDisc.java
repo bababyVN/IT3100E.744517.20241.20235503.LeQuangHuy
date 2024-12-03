@@ -31,9 +31,10 @@ public class DigitalVideoDisc extends Disc {
 	public String toString() {
         return "DVD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getLength() + ": " + this.getCost() + " $";
     }
-	public boolean isMatch(String title) {
-        if (this.getTitle() == null) return false;
-        return this.getTitle().equalsIgnoreCase(title) || this.getTitle().toLowerCase().contains(title.toLowerCase());
-    }
+	
+	public void play() {
+		System.out.println("Playing DVD: " + this.getTitle());
+		System.out.println("DVD length: " + this.getLength());
+	}
 
 }

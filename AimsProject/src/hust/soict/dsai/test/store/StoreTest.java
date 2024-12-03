@@ -11,16 +11,16 @@ public class StoreTest {
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
         DigitalVideoDisc dvd4 = new DigitalVideoDisc("The Avengers", "Action", "Joss Whedon", 143, 29.99f);
 
-        store.addDVD(dvd1);
-        store.addDVD(dvd2);
-        store.addDVD(dvd3);
+        store.addMedia(dvd1);
+        store.addMedia(dvd2);
+        store.addMedia(dvd3);
         store.printStore();
-        store.removeDVD(dvd2);
+        store.removeMedia(dvd2);
 
         store.printStore();
         
-        store.addDVD(dvd4);
-        store.addDVD(new DigitalVideoDisc("Extra DVD", "Comedy", 9.99f));
+        store.addMedia(dvd4);
+        store.addMedia(new DigitalVideoDisc("Extra DVD", "Comedy", 9.99f));
 
         store.printStore();
     }
