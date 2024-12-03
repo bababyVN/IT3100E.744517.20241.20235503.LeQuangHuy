@@ -22,6 +22,16 @@ public abstract class Media {
 			this(title, category, cost);
 			this.id = id;
 		}
+		
+		public String toString() {
+	        return "Media [id=" + id + ", title=" + title + ", category="
+	                + category + ", cost=" + cost + "]";
+	    }
+		public boolean isMatch(String title) {
+	        if (this.getTitle() == null) return false;
+	        return this.getTitle().equalsIgnoreCase(title) || this.getTitle().toLowerCase().contains(title.toLowerCase());
+	    }
+		
 		public String getTitle() {
 			return title;
 		}

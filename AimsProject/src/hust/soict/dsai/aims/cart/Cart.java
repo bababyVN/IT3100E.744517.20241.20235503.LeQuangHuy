@@ -1,144 +1,90 @@
-
 package hust.soict.dsai.aims.cart;
-import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
+import hust.soict.dsai.aims.media.Media;
+import java.util.ArrayList;
 
 public class Cart {
-
 	public static final int MAX_NUMBERS_ORDERED = 20;
-	private DigitalVideoDisc itemsOrdered[] = 
-			new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
-	private int qtyOrdered = 0 ;
+	private ArrayList<Media> itemsOrdered = new ArrayList<Media>(MAX_NUMBERS_ORDERED);
 	
-	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
-		for (int i = 0; i < MAX_NUMBERS_ORDERED; i++) {
-			if (itemsOrdered[i] == disc) {
-				itemsOrdered[i] = null;
-				qtyOrdered -= 1;
-				System.out.println("The disc has been removed: " + disc.getTitle());
-				break;
-			}
-		}
-	}
-	public void addDigitalVideoDisc(DigitalVideoDisc disc) {
-		if (qtyOrdered == MAX_NUMBERS_ORDERED) {
+	public void addMedia(Media media) {
+		if (itemsOrdered.size() == MAX_NUMBERS_ORDERED) {
 			System.out.println("The cart is full");
 		}else {
-			if (qtyOrdered == MAX_NUMBERS_ORDERED - 1) {
+			if (itemsOrdered.size() == MAX_NUMBERS_ORDERED - 1) {
 				System.out.println("The cart is almost full");
 			}
-			for (int i = 0; i < MAX_NUMBERS_ORDERED; i++) {
-				if (itemsOrdered[i] == null) {
-					itemsOrdered[i] = disc;
-					qtyOrdered += 1;
-					System.out.println("The disc has been added: " + disc.getTitle());
-					break;
-				}
+			itemsOrdered.add(media);
+			System.out.println("The media has been added: " + media.getTitle());
 			}
-		}
 	}
-	//public void addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2) {
-		//addDigitalVideoDisc(dvd1);
-		//addDigitalVideoDisc(dvd2);
-	//}
-	//public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
-	//	for (DigitalVideoDisc disc : dvdList) {
-	//		if (qtyOrdered == MAX_NUMBERS_ORDERED) {
-	//			System.out.println("The cart is full");
-	//		}else {
-	//			if (qtyOrdered == MAX_NUMBERS_ORDERED - 1) {
-	//				System.out.println("The cart is almost full");
-	//			}
-	//			for (int i = 0; i < MAX_NUMBERS_ORDERED; i++) {
-	//				if (itemsOrdered[i] == null) {
-	//					itemsOrdered[i] = disc;
-	//					qtyOrdered += 1;
-	//					System.out.println("The disc has been added: " + disc.getTitle());
-	//					break;
-	//				}
-	//			}
-	//		}
-    //    }	
-	//}
-	public void addDigitalVideoDisc(DigitalVideoDisc... dvds) {
-		for (DigitalVideoDisc disc : dvds) {
-			if (qtyOrdered == MAX_NUMBERS_ORDERED) {
-				System.out.println("The cart is full");
-			}else {
-				if (qtyOrdered == MAX_NUMBERS_ORDERED - 1) {
-					System.out.println("The cart is almost full");
-				}
-				for (int i = 0; i < MAX_NUMBERS_ORDERED; i++) {
-					if (itemsOrdered[i] == null) {
-						itemsOrdered[i] = disc;
-						qtyOrdered += 1;
-						System.out.println("The disc has been added: " + disc.getTitle());
-						break;
-					}
-				}
-			}
+	public void addMedia(Media... mediaList) {
+		for (Media media : mediaList) {
+				addMedia(media);
         }	
 	}
+	public void removeMedia(Media media) {
+		if(!itemsOrdered.contains(media)){
+            System.out.println("This item is not in the cart!");
+        }
+        else {
+            itemsOrdered.remove(media);
+            System.out.println("The media has been removed: " + media.getTitle());
+        }
+	}
 	public float totalCost()  {
-		float total = 0;
-	    for (int i = 0; i < MAX_NUMBERS_ORDERED; i++) {
-	        if (itemsOrdered[i] != null) {
-	            total += itemsOrdered[i].getCost();
-	        }
+		float totalCost = 0;
+	    for (Media media : itemsOrdered) {
+	    	totalCost += media.getCost();
 	    }
-	    return total;
+	    return totalCost;
 	}
 	 public void print() {
 	        System.out.println("***********************CART***********************");
 	        System.out.println("Ordered Items:");
-	        float totalCost = 0;
-
-	        for (int i = 0; i < itemsOrdered.length; i++) {
-	        	if (itemsOrdered[i] != null) {
-	            	DigitalVideoDisc dvd = itemsOrdered[i];
-	            	System.out.println((i + 1) + ". " + dvd.toString());
-	            	totalCost += dvd.getCost();
-	        	}
+	        int i = 0;
+	        for (Media media : itemsOrdered) {
+	            System.out.println((i + 1) + ". " + media.toString());
+	            i += 1;
 	        }
-
-	        System.out.println("Total cost: " + totalCost + " $");
+	        System.out.println("Total cost: " + totalCost() + " $");
 	        System.out.println("***************************************************");
 	    }	
 	 public void searchById(int id) {
 	        boolean found = false;
-	        for (DigitalVideoDisc dvd : itemsOrdered) {
-	        	if (dvd != null) {
-	        		int ID = dvd.getId();
+	        for (Media media : itemsOrdered) {
+	        	if (media != null) {
+	        		int ID = media.getId();
 	            	if (ID == id) {
 	            		if (!found) {
 	            			System.out.println("\nSearch by ID (ID: '"+ id +"'):");
 	            		}
-	            		System.out.println(dvd.toString());
+	            		System.out.println(media.toString());
 	            		found = true;
 	            	}
 	            }
 	        }
 
 	        if (!found) {
-	            System.out.println("No DVD found with ID: " + id);
+	            System.out.println("No Media found with ID: " + id);
 	        }
 	    }
 	 public void searchByTitle(String title) {
 	        boolean found = false;
-	        for (DigitalVideoDisc dvd : itemsOrdered) {
-	        	if (dvd != null) {
-	            	if (dvd.isMatch(title)) {
+	        for (Media media : itemsOrdered) {
+	        	if (media != null) {
+	            	if (media.isMatch(title)) {
 	            		if (!found) {
 	            			System.out.println("\nSearch by Title (Keyword: '"+ title +"'):");
 	            		}
-	            		System.out.println(dvd.toString());
+	            		System.out.println(media.toString());
 	            		found = true;
 	            	}
 	            }
 	        }
 
 	        if (!found) {
-	            System.out.println("No DVD found with title containing: " + title);
+	            System.out.println("No Media found with title containing: " + title);
 	        }
 	    }	
 }
