@@ -2,3 +2,9 @@ Lab 02: No. If we create 2 Constructor: + DigitalVideoDisc(title : String) and +
 But we can work around this by using for example: + DigitalVideoDisc(title : String) and + DigitalVideoDisc( category : String, isCategory : boolean).
 
 Lab 03: Java is strictly pass-by-value programming language.
+
+Lab04: 
+- The Media class should implement the Comparable interface.
+- To reflect the natural ordering: Sort by title, if titles are the same then sort by cost.
+- No, the Comparable interface supports only one natural ordering, which is implemented in the compareTo() method. 
+- To allow DVDs to have a unique ordering then we have to override the compareTo() method in the DVD class to implement the new ordering rule.

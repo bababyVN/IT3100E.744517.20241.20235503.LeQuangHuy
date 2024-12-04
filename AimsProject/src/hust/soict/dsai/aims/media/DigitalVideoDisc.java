@@ -27,11 +27,11 @@ public class DigitalVideoDisc extends Disc {
 		nbDigitalVideoDiscs++;
 		this.setId(nbDigitalVideoDiscs);
 	}
-
+	
+	@Override
 	public String toString() {
         return "DVD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getLength() + ": " + this.getCost() + " $";
     }
-	
 	public void play() {
 		System.out.println("Playing DVD: " + this.getTitle());
 		System.out.println("DVD length: " + this.getLength());

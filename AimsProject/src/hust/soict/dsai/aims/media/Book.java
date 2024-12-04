@@ -1,10 +1,9 @@
 package hust.soict.dsai.aims.media;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Book extends Media {
-    private List<String> authors = new ArrayList<String>();
+    private ArrayList<String> authors = new ArrayList<String>();
     
     public Book(String title) {
         super(title);
@@ -15,7 +14,7 @@ public class Book extends Media {
     public Book(String title, String category, float cost) {
         super(title, category, cost);
     }
-    public Book(String title, String category, float cost, List<String> authors) {
+    public Book(String title, String category, float cost, ArrayList<String> authors) {
         super(title, category, cost);
         this.authors = authors;
     }
@@ -37,7 +36,18 @@ public class Book extends Media {
             System.out.println("Author not found: " + authorName);
         }
     }
+    @Override
     public String toString() {
-        return "Book - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + authors + ": " + this.getCost() + " $";
+    	String authors_str = "";
+    	if (authors.isEmpty()) {
+    		authors_str = "unknown_author";
+    	} else {
+    		for (String author : authors) {
+    			authors_str += author + ", ";
+    		}
+    		authors_str = authors_str.substring(0, authors_str.length() - 2);
+    	}
+
+        return "Book - " + this.getTitle() + " - " + this.getCategory() + " - " + authors_str + ": " + this.getCost() + " $";
     }
 }

@@ -2,8 +2,104 @@ package hust.soict.dsai.aims;
 
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.CompactDisc;
+import hust.soict.dsai.aims.media.Book;
+import hust.soict.dsai.aims.media.Media;
+
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Aims {
+	
+	public static void showMenu() {
+		System.out.println("AIMS: ");
+		System.out.println("--------------------------------");
+		System.out.println("1. View store");
+		System.out.println("2. Update store");
+		System.out.println("3. See current cart");
+		System.out.println("0. Exit");
+		System.out.println("--------------------------------");
+		System.out.println("Please choose a number: 0-1-2-3");
+		
+		int input;
+        Scanner scanner = new Scanner(System.in);
+        do {
+            input = scanner.nextInt();
+            switch (input) {
+                case 1:
+                    storeMenu();
+                    break;
+                case 3:
+                    cartMenu();
+                    break;
+                default:
+                    System.out.println("Please choose a number: 0-1-2-3");
+                    break;
+            }
+        } while (input != 0);
+	}
+	public static void updateStoreOptions() {
+        System.out.println("Options: ");
+        System.out.println("--------------------------------");
+        System.out.println("1. Add a new DVD");
+        System.out.println("2. Add a new CD");
+        System.out.println("3. Add a new Book");
+        System.out.println("0. Back");
+        System.out.println("--------------------------------");
+        System.out.println("Please choose a number: 0-1-2-3");
+        int input;
+        Scanner scanner = new Scanner(System.in);
+        do {
+            input = scanner.nextInt();
+            switch (input) {
+            }
+        } while (input != 0);
+    }
+	public static void storeMenu() {
+		System.out.println("Options: ");
+		System.out.println("--------------------------------");
+		System.out.println("1. See a media’s details");
+		System.out.println("2. Add a media to cart");
+		System.out.println("3. Play a media");
+		System.out.println("4. See current cart");
+		System.out.println("0. Back");
+		System.out.println("--------------------------------");
+		System.out.println("Please choose a number: 0-1-2-3-4");
+		int input;
+        Scanner scanner = new Scanner(System.in);
+        do {
+            input = scanner.nextInt();
+            switch (input) {
+                case 1:
+                	System.out.println("Enter media's title: ");
+                	String title = scanner.next();
+                	
+                    mediaDetailsMenu();
+                    break;
+            }
+        } while (input != 0);
+	}
+	public static void mediaDetailsMenu() {
+		System.out.println("Options: ");
+		System.out.println("--------------------------------");
+		System.out.println("1. Add to cart");
+		System.out.println("2. Play");
+		System.out.println("0. Back");
+		System.out.println("--------------------------------");
+		System.out.println("Please choose a number: 0-1-2");
+	}
+	public static void cartMenu() {
+		System.out.println("Options: ");
+		System.out.println("--------------------------------");
+		System.out.println("1. Filter medias in cart");
+		System.out.println("2. Sort medias in cart");
+		System.out.println("3. Remove media from cart");
+		System.out.println("4. Play a media");
+		System.out.println("5. Place order");
+		System.out.println("0. Back");
+		System.out.println("--------------------------------");
+		System.out.println("Please choose a number: 0-1-2-3-4-5");
+	}
 
 	public static void main(String[] args) {
 
@@ -40,6 +136,28 @@ public class Aims {
 		anOrder.searchById(3);
 
 		anOrder.searchByTitle("Aladin");
-	}
+		
+		ArrayList<Media> mediae = new ArrayList<Media>();
+		String[] Authors = {"Peter","Marriot"};
+		ArrayList<String> authors = new ArrayList<String>();
+		for (String author : Authors) {
+			authors.add(author);
+		}
+		CompactDisc cd = new CompactDisc("CD name","Category",5.3f);
+		DigitalVideoDisc dvd = new DigitalVideoDisc("DVD name","Category",3.1f);
+		Book book = new Book("Book name","Category",20.99f, authors);
+		
+		mediae.add(cd);
+		mediae.add(dvd);
+		mediae.add(book);
+		
+		for (Media media : mediae) {
+			System.out.println(media.toString());
+		}
 
+	}
+	
+
+
+	
 }
