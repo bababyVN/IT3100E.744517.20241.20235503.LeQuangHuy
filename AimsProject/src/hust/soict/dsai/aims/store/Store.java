@@ -6,6 +6,10 @@ import hust.soict.dsai.aims.media.Media;
 public class Store {
     private ArrayList<Media> itemsInStore;
     private int capacity = 1000;
+    
+    public Store() {
+        this.itemsInStore = new ArrayList<Media>(capacity);
+    }
 
     public Store(int capacity) {
     	this.capacity = capacity;
@@ -42,4 +46,8 @@ public class Store {
             System.out.println(media.toString());
         }
     }
+
+	public ArrayList<Media> getItemsInStore() {
+		return itemsInStore;
+	}
 }
